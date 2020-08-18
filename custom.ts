@@ -1,4 +1,4 @@
-//% color="#AA278D" weight=100
+//% color="#2FC100" weight=150
 namespace  EPSS{
     //% block
     export function ListReader(tomato: number[]) {
@@ -7,7 +7,7 @@ namespace  EPSS{
             basic.showNumber(tomato[pointer])
             while (true) {
                 if (input.buttonIsPressed(Button.A) && pointer > 0) {
-                   pointer += -1
+                    pointer += -1
                  break;
                 }
                 if (input.buttonIsPressed(Button.B) && pointer < tomato.length - 1) {
