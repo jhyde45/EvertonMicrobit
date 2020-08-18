@@ -1,5 +1,5 @@
 //% color="#AA278D" weight=100
-namespace  lists{
+namespace  EPSS{
     //% block
     export function ListReader(tomato: number[]) {
         let pointer = 0
