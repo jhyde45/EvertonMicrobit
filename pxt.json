@@ -3,14 +3,13 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "dstemp": "github:bsiever/microbit-dstemp-alpha#v0.1.14",
-        "microbit-pxt-timeanddate": "github:bsiever/microbit-pxt-timeanddate#v1.0.3"
+        "radio": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "enum.d.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -18,5 +17,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
