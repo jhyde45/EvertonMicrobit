@@ -3,7 +3,9 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
+        "dstemp": "github:bsiever/microbit-dstemp-alpha#v0.1.14",
+        "microbit-pxt-timeanddate": "github:bsiever/microbit-pxt-timeanddate#v1.0.3"
     },
     "files": [
         "main.blocks",
