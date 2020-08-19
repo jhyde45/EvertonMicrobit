@@ -8,15 +8,7 @@ This repository can be added as an **extension** in MakeCode.
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **New Project**
 * click on **Extensions** under the gearwheel menu
-* search for **https://jhyde45.github.io/EvertonMicrobit** and import
-
-## Edit this project ![Build status badge](https://github.com/jhyde45/readlist/workflows/MakeCode/badge.svg)
-
-To edit this repository in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://jhyde45.github.io/EvertonMicrobit** and click import
+* search for **https://github.com/jhyde45/EvertonMicrobit** and import
 
 #### Metadata (used for search, rendering)
 
