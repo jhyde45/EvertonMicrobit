@@ -1,5 +1,5 @@
 {
-    "name": "readList",
+    "name": "EvertonMicrobit",
     "description": "",
     "dependencies": {
         "core": "*",
