@@ -22,6 +22,6 @@ namespace  EPSS{
     */
     //% block="value of moisture sensor at pin %p"
     export function MoistureSensor(p: AnalogPin): number {
-        return pins.map(pins.analogReadPin(p), 0, 1023, 0, 100);
+        return pins.map(pins.analogReadPin(p), 0, 900, 0, 100);
     }
 }
