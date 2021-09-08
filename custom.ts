@@ -17,4 +17,11 @@ namespace  EPSS{
             }   
         }
     }
+    /**
+    Returns the value of the moisture sensor on a scale of 0 to 100.
+    */
+    //% block="value of moisture sensor at pin %p"
+    export function MoistureSensor(p: AnalogPin): number {
+        return pins.map(pins.analogReadPin(p), 0, 1023, 0, 100);
+    }
 }
