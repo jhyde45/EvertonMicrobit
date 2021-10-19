@@ -24,4 +24,13 @@ namespace  EPSS{
     export function MoistureSensor(p: AnalogPin): number {
         return pins.map(pins.analogReadPin(p), 0, 900, 0, 100);
     }
+    /**
+     * Set a handler for errors 
+     * @param errCallback The error handler 
+     */
+    //% blockId="error" block="temperature sensor error"
+    //% draggableParameters="reporter" weight=0
+    export function sensorError(errCallback: (errorMessage: string, errorCode: number, port: number) => void) {
+        
+    }
 }
