@@ -30,7 +30,7 @@ namespace  EPSS{
      */
     //% block="motion sensed"
     //% draggableParameters="reporter" weight=0
-    export function connectedTo(p: DigitalPin) {
+    export function connectedTo(p: DigitalPin = 0) {
         
     }
 }
