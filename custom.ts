@@ -28,9 +28,9 @@ namespace  EPSS{
      * Set a handler for errors 
      * @param errCallback The error handler 
      */
-    //% blockId="error" block="temperature sensor error"
+    //% block="motion sensed"
     //% draggableParameters="reporter" weight=0
-    export function sensorError(errCallback: (errorMessage: string, errorCode: number, port: number) => void) {
+    export function connectedTo(p: DigitalPin) {
         
     }
 }
