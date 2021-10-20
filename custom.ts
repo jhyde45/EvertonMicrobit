@@ -26,7 +26,9 @@ namespace  EPSS{
     }
     //% blockId="error" block="test"
     // draggableParameters="reporter" weight=0
-    export function pinLow(DigitalPin: () => void) {
-        
+    export function pinLow(PinEvent: (pin: string) => void) {
+        if(PinEvent){
+
+        }           
     }
 }
