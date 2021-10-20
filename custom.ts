@@ -25,7 +25,7 @@ namespace  EPSS{
         return pins.map(pins.analogReadPin(p), 0, 900, 0, 100);
     }
     //% blockId="error" block="test"
-    // draggableParameters="reporter" weight=0
+    //% draggableParameters="reporter" weight=0
     export function pinLow(PinEvent: (pin: string) => void) {
         if(PinEvent){
 
