@@ -25,8 +25,9 @@ namespace  EPSS{
         return pins.map(pins.analogReadPin(p), 0, 900, 0, 100);
     }
     /**
-    Returns the value of the moisture sensor on a scale of 0 to 100.
+    converts input to binary and returns a boolean array
     */
+    //% block
     export function ConvertToBinary(work: number):boolean[] {
         let out: boolean[] = [];
         for (let index = 0; index <= 29; index++) {
