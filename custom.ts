@@ -27,7 +27,6 @@ namespace  EPSS{
     /**
     Returns the value of the moisture sensor on a scale of 0 to 100.
     */
-    //% block="Convert number to binary"
     export function ConvertToBinary(work: number):boolean[] {
         let out: boolean[] = [];
         for (let index = 0; index <= 29; index++) {
