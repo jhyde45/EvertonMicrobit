@@ -25,6 +25,13 @@ namespace  EPSS{
         return pins.map(pins.analogReadPin(p), 0, 900, 0, 100);
     }
     /**
+    Returns the value of the temperature sensor in celsius.
+    */
+    //% block="value of temperature sensor at pin %p"
+    export function TempSensor(p: AnalogPin): number {
+        return pins.map(pins.analogReadPin(p), 0, 1023, 0, 110);
+    }
+    /**
     converts input to binary and returns a boolean array
     */
     //% block
@@ -42,11 +49,5 @@ namespace  EPSS{
         }
         return out;
     }
-    //% blockId="error" block="test"
-    //% draggableParameters="reporter" weight=0
-    export function pinLow(analogReadPin: () => void) {
-        if(analogReadPin){
 
-        }           
-    }
 }
