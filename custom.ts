@@ -29,7 +29,7 @@ namespace  EPSS{
     */
     //% block="value of temperature sensor at pin %p"
     export function TempSensor(p: AnalogPin): number {
-        return pins.map(pins.analogReadPin(p), 0, 1023, 0, 110);
+        return Math.round(pins.map(pins.analogReadPin(p), 0, 1023, 0, 110));
     }
     /**
     converts input to binary and returns a boolean array
