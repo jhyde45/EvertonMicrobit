@@ -32,6 +32,13 @@ namespace  EPSS{
         return Math.round(pins.map(pins.analogReadPin(p), 0, 1023, 0, 110));
     }
     /**
+    Returns the value of the waterproof temperature sensor in celsius.
+    */
+    //% block="value of waterproof temperature sensor at pin %p"
+    export function WaterproofTempSensor(p: AnalogPin): number {
+        return Math.round(pins.map(pins.analogReadPin(p), 760, 110, 0, 80));
+    }
+    /**
     converts input to binary and returns a boolean array
     */
     //% block
