@@ -22,21 +22,32 @@ namespace  EPSS{
     */
     //% block="value of moisture sensor at pin %p"
     export function MoistureSensor(p: AnalogPin): number {
-        return pins.map(pins.analogReadPin(p), 0, 900, 0, 100);
+        return pins.map(pins.analogReadPin(p), 0, 1023, 0, 100);
     }
     /**
     Returns the value of the temperature sensor in celsius.
     */
     //% block="value of temperature sensor at pin %p"
     export function TempSensor(p: AnalogPin): number {
-        return Math.round(pins.map(pins.analogReadPin(p), 0, 1023, 0, 110));
+        //return Math.round(pins.map(pins.analogReadPin(p), 0, 1023, 0, 110));
+        return Math.round((100 * pins.analogReadPin(p) * (3.3 / 10.24)) * 3.3 / 10.24) / 100;
     }
     /**
     Returns the value of the waterproof temperature sensor in celsius.
     */
     //% block="value of waterproof temperature sensor at pin %p"
     export function WaterproofTempSensor(p: AnalogPin): number {
-        return Math.round(pins.map(pins.analogReadPin(p), 800, 115, 0, 80));
+        //return Math.round(pins.map(pins.analogReadPin(p), 800, 115, 0, 80));
+        let value: number = pins.analogReadPin(p);
+        let n_Vref: number = 3.3;
+        let n_Voltage_Value: number = ((value / 1024.0) * n_Vref);
+        let n_Rt: number = ((n_Voltage_Value * 10.0) / (n_Vref - n_Voltage_Value));
+        if (((0.593 > n_Rt) || (n_Rt > 331.498))) {
+            return -1;
+        }
+        else {
+            return Math.round(((1177692.5 / (3950 + (298.15 * (Math.log((n_Rt / 10.0)))))) - 270.35) * 100) / 100;
+        }
     }
     /**
     converts input to binary and returns a boolean array
