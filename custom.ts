@@ -25,6 +25,22 @@ namespace  EPSS{
         return pins.map(pins.analogReadPin(p), 0, 1023, 0, 100);
     }
     /**
+    PH SENSOR, from boson kit extension
+    */
+    //% block
+    export function PHsensor(pin: AnalogPin): number {
+
+        let map: number = 1024;
+        let aref: number = 3300;
+        let _neutralVoltage: number = 1500.0;
+        let _acidVoltage: number = 2032.44;
+        let voltage: number = pins.analogReadPin(pin) / map * aref;
+        let slope: number = (7.0 - 4.0) / ((_neutralVoltage - 1500.0) / 3.0 - (_acidVoltage - 1500.0) / 3.0);
+        let intercept: number = 7.0 - slope * (_neutralVoltage - 1500.0) / 3.0;
+        let _phValue: number = Math.round(slope * (voltage - 1500.0) / 3.0 + intercept);
+        return _phValue;
+    }
+    /**
     Returns the value of the temperature sensor in celsius.
     */
     //% block="value of temperature sensor at pin %p"
