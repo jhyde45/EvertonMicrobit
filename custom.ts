@@ -27,7 +27,7 @@ namespace  EPSS{
     /**
     PH SENSOR, from boson kit extension
     */
-    //% block
+    //% block="value of PH sensor at pin %pin"
     export function PHsensor(pin: AnalogPin): number {
 
         let map: number = 1024;
